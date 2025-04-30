@@ -1,3 +1,3 @@
-jQuery(document).ready(function () {
-    alert('hasan');
+jQuery(document).ready(function ($) {
+    let x = 5;
 });
