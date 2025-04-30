@@ -1,3 +1,5 @@
 jQuery(document).ready(function ($) {
-    let x = 5;
+    let x = $(this);
+    console.log(x);
+
 });
