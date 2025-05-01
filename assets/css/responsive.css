@@ -1,0 +1,64 @@
+/* نسخه ریسپانسیو برای WhyChooseUS */
+
+@media (max-width: 1200px) {
+    .WhyChooseUS .WhyChooseUS-container .Mask {
+      width: 100%;
+      left: 0;
+      padding: 0 20px;
+      padding:0 20px;
+      -webkit-mask:unset;
+      mask:unset;
+    }
+  
+  }
+  
+  @media (max-width: 768px) {
+    .WhyChooseUS .WhyChooseUS-container .Text {
+      width: 90%;
+      right: 5%;
+      font-size: 28px;
+    }
+    .WhyChooseUS .WhyChooseUS-container .whyChooseUS-list li {
+        width: 80% !important;
+        padding: 26px 30px;
+    }
+    .WhyChooseUS .WhyChooseUS-container .whyChooseUS-list li .item_body p {
+        font-size: 18px !important;
+    }
+    .WhyChooseUS .WhyChooseUS-container .whyChooseUS-list li .item_head .item_title {
+        font-size: 22px;
+    }
+  
+    .whyChooseUS-list li.active {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg) !important;
+    }
+  
+    .whyChooseUS-list li.previous {
+      transform: translate(-52%, -52%) scale(0.92) rotate(-2deg);
+    }
+  
+    .whyChooseUS-list li:nth-child(odd).active,
+    .whyChooseUS-list li:nth-child(even).active {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+  
+    .WhyChooseUS .WhyChooseUS-container .whyChooseUS-list li:nth-child(n) {
+      transform: translate(-50%, -100%) scale(0.9) rotate(0deg);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .WhyChooseUS .WhyChooseUS-container .Text {
+      font-size: 22px;
+    }
+  
+    .whyChooseUS-list li .item_head .item_title {
+      font-size: 20px;
+    }
+  
+    .whyChooseUS-list li .item_body p {
+      font-size: 16px !important;
+      line-height: 1.8;
+    }
+  }
+  
