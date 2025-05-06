@@ -13,6 +13,7 @@ body {
 .marquee {
     width: 100%;
     transform: perspective(1200px) rotateX(20deg) rotateY(20deg);
+    padding-top: 12rem;
 }
 
 .marquee .track {
@@ -536,6 +537,7 @@ section {
 .faq__item__head.active i::after {
     transform: rotate(90deg);
 }
-.aic{
+
+.aic {
     align-items: center;
 }
