@@ -98,4 +98,13 @@ jQuery(document).ready(function () {
         }
     });
 
+
+
+    $('.faq__item__head').click(function (e) {
+        e.preventDefault();
+        $(this).siblings().slideToggle();
+        $(this).toggleClass('active');
+
+    });
+
 });
