@@ -148,7 +148,7 @@ jQuery(document).ready(function () {
         if (scrollBottom >= elemTop) {
             $elemm.css({
                 // opacity: opacity,
-                transform: `perspective(1200px) translateY(-10rem) scale(${scale})`
+                transform: `perspective(1200px) translateY(-16rem) scale(${scale})`
             });
         }
     });
@@ -157,6 +157,24 @@ jQuery(document).ready(function () {
 
 
 
+    setInterval(function () {
+        var $circle = $('<div class="svg-circle"></div>');
+        $('.dev-svg').append($circle);
+
+        $circle.on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
+            $(this).remove();
+        });
+    }, 5000);
+
+
+    setInterval(function () {
+        var $circle = $('<div class="svg-circle2"></div>');
+        $('.dev-svg').append($circle);
+
+        $circle.on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
+            $(this).remove();
+        });
+    }, 5000);
 
 
 
