@@ -160,4 +160,35 @@ jQuery(document).ready(function () {
 
 
 
+
+
+    const $images = $('.dribImg');
+
+    $(window).on('mousemove', function (e) {
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+        const posX = (e.clientX - centerX) / centerX;
+        const posY = (e.clientY - centerY) / centerY;
+
+        $images.each(function (index) {
+            const intensity = (index + 1) * 8;
+            const directionX = index % 2 === 0 ? 1 : -1;
+            const directionY = index % 3 === 0 ? 1 : -1;
+
+            gsap.to($(this), {
+                x: posX * intensity * directionX,
+                y: posY * intensity * directionY,
+                ease: "none",
+                duration: 0.2,
+            });
+        });
+    });
+
+
+
+
+
+
+
+
 });

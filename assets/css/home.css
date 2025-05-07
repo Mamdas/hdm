@@ -569,6 +569,7 @@ section {
     display: grid;
     place-items: center;
     padding-top: 12rem;
+    padding-bottom: 2rem;
 }
 
 .section-light {
@@ -585,5 +586,93 @@ section {
     gap: .5rem;
     font-size: 1.125rem;
     color: #92969f;
+}
 
+.floatimg-wrap img {
+    display: block;
+    margin: auto;
+}
+
+.floatimg-wrap p {
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.floatimg-wrap a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.floatimg-wrap a {
+    color: #fff;
+    height: 3.5rem;
+    border-radius: 5rem;
+    border: 2px solid #fff;
+    padding-inline: 2rem;
+    font-size: 1.0625rem;
+    display: inline-flex;
+    align-items: center;
+    transition: 0.5s;
+    justify-content: center;
+}
+
+.floatimg-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 33rem;
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    text-align: center;
+}
+
+
+.section-floatimg {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-floatimg > img {
+    position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 22vw;
+    border-radius: 20px;
+}
+
+.img1 {
+    top: 1%;
+    left: 8%;
+}
+
+.img2 {
+    top: 30%;
+    left: 1%;
+}
+
+.img3 {
+    bottom: 1%;
+    left: 15%;
+}
+
+.img4 {
+    right: 10%;
+    top: 8%;
+}
+
+.img5 {
+    right: 1%;
+    top: 35%;
+}
+
+.img6 {
+    bottom: 0%;
+    right: 20%;
 }
