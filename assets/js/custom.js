@@ -107,4 +107,57 @@ jQuery(document).ready(function () {
 
     });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $(window).on("scroll", function () {
+        var $elem = $(".section-light");
+        var $elemm = $(".section-light img");
+        var elemTop = $elem.offset().top;
+        var elemHeight = $elem.outerHeight();
+        var scrollTop = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var scrollBottom = scrollTop + windowHeight;
+
+        var start = elemTop - windowHeight;
+        var end = elemTop + elemHeight - windowHeight;
+
+
+        var progress = (scrollTop - start) / (end - start);
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        // محاسبه‌ی مقادیر نهایی
+        var opacity = 0.5 + (0.5 * progress);
+        var translateY = 44 * (1 - progress);
+        var scale = 1 + (0.75 * progress);
+        var rotateX = 22 * (1 - progress);
+
+
+
+        if (scrollBottom >= elemTop) {
+            $elemm.css({
+                // opacity: opacity,
+                transform: `perspective(1200px) translateY(-10rem) scale(${scale})`
+            });
+        }
+    });
+
+
+
+
+
+
+
+
 });

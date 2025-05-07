@@ -385,8 +385,7 @@ body {
 }
 
 section {
-    margin-block: 5rem;
-
+    margin-block: 6rem;
 }
 
 @keyframes scroll-x {
@@ -540,4 +539,51 @@ section {
 
 .aic {
     align-items: center;
+}
+
+.light-wrap p {
+    color: #92969f;
+    font-size: 1.125rem;
+    text-align: center;
+    width: 50%;
+}
+
+.light-wrap h2 {
+    color: #fff;
+    font-size: 3.625rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.light-wrap img {
+    height: 40rem;
+    position: absolute;
+    z-index: -1;
+    transform: translateY(-10rem) scale(1.5);
+}
+
+.light-wrap {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    padding-top: 12rem;
+}
+
+.section-light {
+    overflow: hidden;
+}
+
+.light-wrap span i {
+    color: rgb(201, 128, 79);
+}
+
+.light-wrap span {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.125rem;
+    color: #92969f;
+
 }
