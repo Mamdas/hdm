@@ -20,6 +20,195 @@ jQuery(document).ready(function () {
             top: mouseY - 40 + "px"
         });
     });
+
+
+
+
+    $(window).on("scroll", function () {
+        var sectionOffset = $(".section-creative").offset().top;
+        var scrollTop = $(window).scrollTop();
+        var distance = scrollTop - sectionOffset;
+
+        if (distance < 0) return;
+
+        var maxScroll = 300; // حداکثر فاصله‌ای که تغییر اعمال میشه
+        var progress = Math.min(distance / maxScroll, 1); // عدد بین 0 تا 1
+
+        var rotateX = 35 * (1 - progress); // از 35 به 0
+        var opacity = 0.5 + 0.5 * progress; // از 0.5 به 1
+
+        $(".dashboard").css({
+            "transform": "perspective(1200px) rotateX(" + rotateX + "deg) rotateY(0)",
+            "opacity": opacity
+        });
+    });
+
+
+
+    $(window).on("scroll", function () {
+        var sectionOffset = $(".section-date").offset().top;
+        var scrollTop = $(window).scrollTop();
+        var distance = scrollTop - sectionOffset;
+
+        if (distance < 0) return;
+
+        var maxScroll = 300; // حداکثر فاصله‌ای که تغییر اعمال میشه
+        var progress = Math.min(distance / maxScroll, 1); // عدد بین 0 تا 1
+
+        var rotateX = 35 * (1 - progress); // از 35 به 0
+
+        $(".date__wrap").css({
+            "transform": "perspective(1200px) rotateX(" + rotateX + "deg) rotateY(0)"
+        });
+    });
+
+
+
+
+
+
+    $(window).on("scroll", function () {
+        var $elem = $(".date__wrap");
+        var elemTop = $elem.offset().top;
+        var elemHeight = $elem.outerHeight();
+        var scrollTop = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var scrollBottom = scrollTop + windowHeight;
+
+        var start = elemTop - windowHeight;
+        var end = elemTop + elemHeight - windowHeight;
+
+
+        var progress = (scrollTop - start) / (end - start);
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        // محاسبه‌ی مقادیر نهایی
+        var opacity = 0.5 + (0.5 * progress);
+        var translateY = 44 * (1 - progress);
+        var scale = 0.8 + (0.2 * progress);
+        var rotateX = 22 * (1 - progress);
+
+
+
+        if (scrollBottom >= elemTop) {
+            $elem.css({
+                opacity: opacity,
+                transform: `perspective(1200px) translateY(${translateY}px) scale(${scale}) rotateX(${rotateX}deg)`
+            });
+        }
+    });
+
+
+
+    $('.faq__item__head').click(function (e) {
+        e.preventDefault();
+        $(this).siblings().slideToggle();
+        $(this).toggleClass('active');
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $(window).on("scroll", function () {
+        var $elem = $(".section-light");
+        var $elemm = $(".section-light img");
+        var elemTop = $elem.offset().top;
+        var elemHeight = $elem.outerHeight();
+        var scrollTop = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var scrollBottom = scrollTop + windowHeight;
+
+        var start = elemTop - windowHeight;
+        var end = elemTop + elemHeight - windowHeight;
+
+
+        var progress = (scrollTop - start) / (end - start);
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        // محاسبه‌ی مقادیر نهایی
+        var opacity = 0.5 + (0.5 * progress);
+        var translateY = 44 * (1 - progress);
+        var scale = 1 + (0.75 * progress);
+        var rotateX = 22 * (1 - progress);
+
+
+
+        if (scrollBottom >= elemTop) {
+            $elemm.css({
+                // opacity: opacity,
+                transform: `perspective(1200px) translateY(-16rem) scale(${scale})`
+            });
+        }
+    });
+
+
+
+
+
+    setInterval(function () {
+        var $circle = $('<div class="svg-circle"></div>');
+        $('.dev-svg').append($circle);
+
+        $circle.on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
+            $(this).remove();
+        });
+    }, 5000);
+
+
+    setInterval(function () {
+        var $circle = $('<div class="svg-circle2"></div>');
+        $('.dev-svg').append($circle);
+
+        $circle.on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
+            $(this).remove();
+        });
+    }, 5000);
+
+
+
+
+
+    const $images = $('.dribImg');
+
+    $(window).on('mousemove', function (e) {
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+        const posX = (e.clientX - centerX) / centerX;
+        const posY = (e.clientY - centerY) / centerY;
+
+        $images.each(function (index) {
+            const intensity = (index + 1) * 8;
+            const directionX = index % 2 === 0 ? 1 : -1;
+            const directionY = index % 3 === 0 ? 1 : -1;
+
+            gsap.to($(this), {
+                x: posX * intensity * directionX,
+                y: posY * intensity * directionY,
+                ease: "none",
+                duration: 0.2,
+            });
+        });
+    });
+
+
+
+
+
+
+
+
 });
 
 
