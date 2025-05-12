@@ -66,7 +66,7 @@ jQuery(document).ready(function () {
 //   });
     
 
-
+// Why Choose Us
 document.addEventListener("DOMContentLoaded", () => {
     const steps = document.querySelectorAll(".whyChooseUS-list li");
     const container = document.querySelector(".WhyChooseUS");
@@ -116,6 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
 
+
+  // Teams
   
  let xPos = 0;
 
